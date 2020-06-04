@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Traffic Light Simulator (JS & OOP & EC6)</title>
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="./src/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="./src/css/style.css" type="text/css">
+
+     <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+
+     <!-- font awesome -->
+    <link rel="stylesheet" href="./src/css/all.css">
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6 mx-auto pt-3">
+                <div class="form-traffic">
+
+                    <!-- traffic feedback -->
+                    <div class="traffic-feedback alert alert-danger text-capitalize">traffic feedback</div>
+                    <div class="traffic-success alert alert-success text-capitalize">traffic success</div>
+      
+                    <form id="traffic-form" class="traffic-form">
+                        <h2>
+                            Traffic Light Simulator (JS & OOP & EC6)
+                        </h2>
+                        Yellow light duration: (ms)<br>
+                        <input type="text" id="YellowDuration" class="form-control" value="1000"/><br>
+                        Lights switching duration: (ms)<br>
+                        <input type="text" id="SwitchingDuration" class="form-control" value="5000"/><br>
+                        Total Demo duration: (ms)<br>
+                        <input type="text" id="TotalDuration" class="form-control" value="20000"/><br>
+                        <input type="button" id="Start_Simulation" class="btn text-capitalize Start_Simulation" value="Start Simulation" /><br />
+                        <label id="ValidationResult"/>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="col-6 mx-auto pt-3">
+                <div class="traffic-simulator" id= "parent-id">
+                    <div id="North" class="TrafficLightPanel">
+                        <p id="RedLight" class="ON"></p>
+                        <p id="YellowLight"></p>
+                        <p id="GreenLight"></p>
+                    </div>
+                    <div id="South" class="TrafficLightPanel">
+                        <p id="RedLight" class="ON"></p>
+                        <p id="YellowLight"></p>
+                        <p id="GreenLight"></p>
+                    </div>
+                    <div id="West" class="TrafficLightPanel">
+                        <p id="RedLight" class="ON"></p>
+                        <p id="YellowLight"></p>
+                        <p id="GreenLight"></p>
+                    </div>
+                    <div id="East" class="TrafficLightPanel">
+                        <p id="RedLight" class="ON"></p>
+                        <p id="YellowLight"></p>
+                        <p id="GreenLight"></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="module" src="./src/js/script.js"></script>
+
+</body>
+</html>
